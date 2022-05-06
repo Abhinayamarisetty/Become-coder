@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int t,n,l,r,x,i;
+	cin>>n;
+	int arr[n],prefix[n+1]={0};
+	for(i=0;i<n;i++)
+	cin>>arr[i];
+    cin>>t;
+	while(t--)
+	{
+		cin>>l>>r>>x;
+		prefix[l]+=x;
+		prefix[r+1]+=-x;
+	}
+	for(i=1;i<n;i++)
+	prefix[i]+=prefix[i-1];
+    for(i=0;i<n;i++)
+    cout<<arr[i]+prefix[i]<<" ";
+}
