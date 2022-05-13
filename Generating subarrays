@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int l,i,j,k;
+	cin>>l;
+	int a[l];
+	for(i=0;i<l;i++)
+	{
+		cin>>a[i];
+	}
+	for(i=0;i<l;i++)
+		for(j=i;j<l;j++)
+		{
+		  for(k=i;k<=j;k++)
+		  {
+		  	cout<<a[k]<<" ";
+		  }
+		  cout<<endl;
+		}
+}
